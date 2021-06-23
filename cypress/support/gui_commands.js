@@ -33,3 +33,8 @@ Cypress.Commands.add("gui_createIssue", (issue) => {
   cy.get(".qa-issuable-form-description").type(issue.description);
   cy.contains("Submit issue").click();
 });
+
+Cypress.Commands.add("gui_setMilestoneOnIssue", (milestone) => {
+  cy.get(".block.milestone .edit-link").click();
+  cy.contains(milestone.title).click();
+});
