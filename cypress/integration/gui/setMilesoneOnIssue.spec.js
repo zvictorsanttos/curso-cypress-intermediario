@@ -30,7 +30,6 @@ describe("Set milestone on issue", () => {
 
   it(" sucessfully", () => {
     cy.gui_setMilestoneOnIssue(milestone);
-
     cy.get(".block.milestone").should("contain", milestone.title);
   });
 });
